@@ -9,7 +9,7 @@ BAUD = 115200
 ARDUINO_CLI = arduino-cli
 
 # === Sketch paths ===
-SKETCH = keyboard-dev.ino
+SKETCH = k-is-for-keyboard.ino
 
 # === Commands ===
 .PHONY: all keyboard build-keyboard upload-keyboard serial clean info 
