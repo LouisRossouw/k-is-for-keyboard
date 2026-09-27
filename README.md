@@ -1,3 +1,3 @@
-# Handwired diy keyboard - maybe
+# 40% Handwired DIY keyboard
 
-wip / play
+WIP - a little wild.
