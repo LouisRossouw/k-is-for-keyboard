@@ -1,15 +1,16 @@
 # === Config ===
 
 # Board / port
-FQBN=esp32-bluepad32:esp32:lolin_c3_mini
-PORT = COM10
+# FQBN=esp32-bluepad32:esp32:lolin_s3_mini
+FQBN=esp32-bluepad32:esp32:lolin_s3_mini
+PORT = COM12
 BAUD = 115200
 
 # Arduino CLI
 ARDUINO_CLI = arduino-cli
 
 # === Sketch paths ===
-SKETCH = keyboard-dev.ino
+SKETCH = k-is-for-keyboard.ino
 
 # === Commands ===
 .PHONY: all keyboard build-keyboard upload-keyboard serial clean info 
