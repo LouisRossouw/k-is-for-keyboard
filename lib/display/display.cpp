@@ -63,7 +63,7 @@ void Display::begin() {
   }
   Serial.println("SSD1306 initialized successfully!");
 
-  showMessage("Hello2", 3);
+  showMessage("K For Keyboard", 1);
   delay(2000);
 }
 

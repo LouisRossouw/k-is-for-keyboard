@@ -1,16 +1,30 @@
 #pragma once
 
+#include <stdint.h>
+
 struct KeyboardConfig {
-  // OLED Display
-  int oledSda = 0; // SDA
-  int oledScl = 1; // Scl
-  int textSize = 1;
 
-  // Addressable leds; We only need the data pin,
-  // TODO; find the correct pin
-  int led0 = 10;
+  // =========================
+  // OLED
+  // =========================
 
-  // TODO; set the correct rows & cols with the new keyboard!
-  int rows = 3;
-  int cols = 3;
+  uint8_t oledSda = 9;
+  uint8_t oledScl = 10;
+  uint8_t textSize = 1;
+
+  // =========================
+  // LEDs
+  // =========================
+
+  uint8_t led0 = 7;
+
+  // =========================
+  // Keyboard matrix
+  // =========================
+
+  static constexpr uint8_t rows = 4;
+  static constexpr uint8_t cols = 13;
+
+  uint8_t rowPins[rows] = {40, 41, 42, 45};
+  uint8_t colPins[cols] = {14, 15, 16, 17, 18, 21, 33, 34, 35, 36, 37, 38, 39};
 };

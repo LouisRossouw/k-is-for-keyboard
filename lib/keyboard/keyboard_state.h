@@ -9,4 +9,5 @@ struct KeyboardState {
   uint8_t brightness = 50;
   bool bluetoothEnabled = false;
   bool needsDisplayUpdate = true;
+  bool fnHeld = false;
 };

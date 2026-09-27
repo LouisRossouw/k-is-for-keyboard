@@ -6,6 +6,8 @@
 #include "keys.h"
 #include "lights.h"
 
+uint8_t keyToHID(KeyCode key);
+
 class Keyboard {
 public:
   Keyboard(const KeyboardConfig &config);

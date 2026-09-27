@@ -5,7 +5,7 @@
 #include "keyboard_state.h"
 #include <Adafruit_NeoPixel.h>
 
-#define STRIP_PIN 10
+#define STRIP_PIN 7
 #define STRIP_COUNT 16 // Change to your actual LED count
 
 class Lighting {
@@ -27,7 +27,11 @@ public:
   void error(int times, int delayMs);
   void builtInLedOff();
   void off();
-  void testStrip(); // Lights all LEDs red to verify strip is working
+  void testStrip();       // Lights all LEDs red to verify strip is working
+  void ambientBaseGlow(); // Elegant ambient breathing base glow
+  void rainbow();         // Full rainbow cycle across all LEDs (FN held)
+
+  void flashColumn(uint8_t column);
 
   void loop();
 
@@ -36,6 +40,9 @@ private:
 
   int _pin0; // Data
   Adafruit_NeoPixel _strip;
+
+  uint8_t _flashColumn = 255;
+  uint32_t _flashUntil = 0;
 
   uint32_t wheel(uint8_t pos); // Maps 0-255 to a rainbow colour
 };
